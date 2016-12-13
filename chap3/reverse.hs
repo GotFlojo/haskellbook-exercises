@@ -20,4 +20,4 @@ rvrs s = end ++ " " ++  middle ++ " " ++ beginning
         end       = drop 9 s
 
 main :: IO () 
-main = print (rvrs "Curry is awesome") -- equivalent: print $ rvrs "Curry is awesome"
+main = print (rvrs "Curry is awesome") -- equivalent print $ rvrs "Curry is awesome"
