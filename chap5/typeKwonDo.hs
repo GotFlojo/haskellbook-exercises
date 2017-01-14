@@ -42,6 +42,7 @@ xform (x, y) = (xz x,  yz y)
 
 --4
 munge :: (x -> y ) -> ( y -> (w, z)) -> x -> w
+-- return the first entry in the pair via pattern matching
 munge xToY yToPair x = frst
     where (frst, _) = yToPair (xToY x)
 
