@@ -51,3 +51,4 @@ instance (Eq a, Eq b) => Eq (EitherOr a b) where
     (==) (Hello a1) (Hello a2) = a1 == a2
     (==) (Goodbye a1) (Goodbye a2) = a1 == a2
     (==) _ _ = False
+    (==) (Goodbye a1) (Goodbye a2) = a1 == a2
