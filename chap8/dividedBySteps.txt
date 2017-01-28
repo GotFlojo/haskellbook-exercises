@@ -1,0 +1,32 @@
+dividedBy num denum = go num denum 0
+    where go n d count
+        | n < d = (count, n)
+        | otherwise = go (n-d) 2 (count +1)
+
+
+dividedBy 15 2 =
+    go 15 2 0
+    | 15 < 2 // false
+    | otherwise = go (15-2) 2 1
+
+    go 13 2 1
+        go (13 - 2) 2 2
+        
+        go 11 2 2
+            go (11 - 2) 2 3
+
+            go 9 2 3
+                go (9 - 2 ) 2 4
+
+                go 7 2 4
+                    go (7 - 2) 2 5
+
+                    go 5 2 5
+                        go (5 - 2) 2 6
+
+                        go 3 2 6
+                            go (3 - 2) 2 7
+
+                            go 1 2 7
+                                | 1 < 2 => (7, 1)
+                        
